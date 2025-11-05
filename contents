@@ -1,0 +1,6 @@
+The details of the experimental parameters are provided in Table II.
+
+Fig. 10 displays the training and validation loss and accuracy curves for the InceptionTime model with fixed-CAC loss over 300 epochs. These loss and accuracy curves suggest that the InceptionTime model with fixed-CAC loss achieves stable training without signs of overfitting within the specified epochs.
+
+F. Ablation Analysis
+To analyze the contribution of each module in the proposed method, we conducted an ablation analysis by systematically removing or replacing individual components. The results are shown in Table VI. This analysis provides insight into the contribution of each module to the overall performance. Replacing ECGReconNet with U-Net or replacing InceptionTime with LSTM led to slight drops in closed-set accuracy and more substantial declines in open-set accuracy, highlighting the effectiveness of both ECGReconNet and InceptionTime for ECG reconstruction and feature extraction. Removing CAC loss & Hyperspherical Delineation (HD) and using thresholded Softmax instead slightly improves closed-set accuracy but significantly reduces open-set accuracy, showing their importance for robustness in open-set scenarios. Lastly, replacing Hyperspherical Delineation with Isolation Forest lowered both metrics, underscoring its role in differentiating known and unknown classes.
